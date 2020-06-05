@@ -98,6 +98,27 @@ void mostEfficientRoute(Vertex* ptr)
     }
 }
 
+void printListWeight(Vertex* ptr, int i)
+{
+    cout << city[cityNum];
+    while (ptr != nullptr)
+    {
+        cout << " > " << city[ptr->val] << "(" << ptr->val << ")" 
+             << " = " << ptr->cost << "m";
+        ptr = ptr->next;
+    }
+}
+
+void mapMaker(Vertex* ptr, int i)
+{
+    while (ptr != nullptr)
+    {
+        cout << "(" << i << "," << ptr->val << "," << ptr->cost << ")";
+        ptr = ptr->next;
+    }
+    cout << endl;
+}
+
 //calling the functions neatly and with the proper city names with ID listed
 //generic functions are called at the end, with custom output based on the city chosen keyed out first
 int main()
@@ -108,21 +129,11 @@ int main()
         { 0, 1, 14 }, { 0, 2, 20 }, { 0, 3, 39 }, { 1, 0, 14 }, { 1, 2, 17 }, { 1, 3, 30 },
         { 2, 0, 20 }, { 2, 1, 17 }, { 2, 3, 26 }, { 3, 0, 39 }, { 3, 1, 30 }, { 3, 2, 26 },
     };
-
-    //this is the standard list without redunancies
-    Edge standardList[] =
-    {
-        { 0, 1, 14 }, { 0, 2, 20 }, { 0, 3, 39 }, { 1, 2, 17 }, { 1, 3, 30 }, { 2, 3, 26 }
-    };
-
-    int N = 4;
-
-    int n = sizeof(weightedList)/sizeof(weightedList[0]);
-
-    Graph graph(weightedList, n, N);
-
+  
     cout << "Welcome to the Team Dennis Solar Sales Assistance App.\n\nHere is the legend for the cities currently being canvassed:\n\n";
-
+    int N = 4;
+    int n = sizeof(weightedList)/sizeof(weightedList[0]);
+    Graph graph(weightedList, n, N);
     for (int i = 0; i < N; i++)
     {
     cout << city[i] << "(" << i << ")\n";
@@ -136,7 +147,7 @@ int main()
         {
         cout << endl << "Most efficient way to complete route, starting in: " << city[cityNum] << "(" << cityNum << ")";
         mostEfficientRoute(graph.head[cityNum]);
-        cout << "\n> " << city[cityNum] << "(0)\n";
+        cout << " > " << city[cityNum] << "("<< cityNum << ")\n";
         }
         else
         {
@@ -147,34 +158,49 @@ int main()
         
         //this takes the user's inputted city and gives the travel time for that city only
         //the weightedList in my graph are the minutes between cities, so my Map is based on time
-        cout << "\n'Current' Travel Times based on your entered city (Matrix Map):\n";
+        cout << "\n'Current' Travel Times based on your entered city:\n";
         for (int i = cityNum; i < cityNum+1; i++)
         {
             travelTimes(graph.head[i], i);
         }
 
-        cout << "\n|Reference guides|";
+        //attempt to calculate trip length
+        for (int i = cityNum; i < cityNum+1; i++)
+        {
+            printListWeight(graph.head[i], i-1);
+            cout << endl;
+        }
 
-        cout << "\n\nRound trips ranked from least to most efficient:\n";
+        cout << "\n|Reference guides|\n";
+        
+        cout << "\nMatrix Map:\n";
+        int X = 5;
+        int x = sizeof(weightedList)/sizeof(weightedList[0]);
+        Graph graph2(weightedList, x, X);
+        for (int i = 0; i < N; i++)
+        {
+            mapMaker(graph.head[i], i);;
+        }
+
+        cout << "\nRound trips ranked from least to most efficient:\n";
         for (int i = 1; i < N; i++)
         {
-        cout << city[0] << "(0) > ";
-        cout << city[i] << "(" << i << ")";;
-        mostEfficientRoute(graph.head[i]);
-        cout << endl;
+            cout << city[0] << "(0) > ";
+            cout << city[i] << "(" << i << ")";;
+            mostEfficientRoute(graph.head[i]);
+            cout << endl;
         }
 
         cout << "\nTrip Planner/Representer:\n";
         for (int i = 0; i < N; i++)
         {
-        cout << city[i] << "(" << i << ")";
-        mostEfficientRoute(graph.head[i]);
-        cout << endl;
+            cout << city[i] << "(" << i << ")";
+            mostEfficientRoute(graph.head[i]);
+            cout << endl;
         }
 
-    cout<< endl << "Shortest Path Determiner:\n";
-    Edge weightedList[] = { { 0, 1 }, { 0, 2 }, { 0, 3 }, { 1, 2 }, { 1, 3 }, { 2, 3 } };
-    int N = 3;
+    cout << endl << "Shortest Path Determiner:\n";
+    int N = 4;
     int n = sizeof(weightedList)/sizeof(weightedList[cityNum]);
     Graph graph(weightedList, n, N);
     for (int i = 0; i < N; i++)
@@ -183,6 +209,7 @@ int main()
         mostEfficientRoute(graph.head[i]);
         cout << endl;
     }
- }
+
+}
 return 0;
 }
