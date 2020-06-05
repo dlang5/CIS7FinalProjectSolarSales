@@ -49,12 +49,16 @@ Riverside is 33.8 miles away from Hemet. floatRH == floatHR == 33.8
 
 Perris is 15.6 miles away from Moreno Valley. floatPM == floatMP == 15.6
 
-Perris is 16.5 miles away from Hemet. floatPH == floatHP == 16.5
+Perris is 16.5 miles away from Hemet. floatPH == floatHP == 16.5\
+
+Moreno Valley is 23.7 miles away from Hemet. floatMH == floatHM == 23.7
 
 https://maps.google.com/
 
-Moreno Valley is 23.7 miles away from Hemet. floatMH == floatHM == 23.7
+
 after finding these I determined its probably smarter to use average travel time.
+
+
 travel time in minutes between cities:
 
 RP = 20;
