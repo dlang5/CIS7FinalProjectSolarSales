@@ -98,6 +98,7 @@ void mostEfficientRoute(Vertex* ptr)
     }
 }
 
+//this function sorts the edges
 void printListWeight(Vertex* ptr, int i)
 {
     cout << city[cityNum];
@@ -109,6 +110,7 @@ void printListWeight(Vertex* ptr, int i)
     }
 }
 
+//this function displays the map
 void mapMaker(Vertex* ptr, int i)
 {
     while (ptr != nullptr)
@@ -164,7 +166,7 @@ int main()
             travelTimes(graph.head[i], i);
         }
 
-        //attempt to calculate trip length
+        //calculate trip length based on sorted edges
         for (int i = cityNum; i < cityNum+1; i++)
         {
             printListWeight(graph.head[i], i-1);
