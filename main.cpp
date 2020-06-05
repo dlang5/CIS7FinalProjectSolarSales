@@ -30,15 +30,19 @@ const char *city[4] = {"Riverside","Moreno Valley","Perris","Hemet"};
 //this array is unnecessary
 //int cityNums[4] = {0,1,2,3};
 
+//Implements the vertex structure, gives the point two values and a pointer
 struct Vertex {
     int val, cost;
     Vertex* next;
 };
 
+//the edges contains three values, the source, destination, and distance
 struct Edge {
     int src, dest, weight;
 };
 
+//the graph class allows the graph to be "drawn" in the mind of the program
+//linked vertices are held together according to a later list of values
 class Graph
 {
     Vertex* getAdjListVertex(int value, int weight, Vertex* head)
@@ -51,8 +55,8 @@ class Graph
     }
 int N;
 
+//the drawing of the graph
 public:
-
     Vertex **head;
     Graph(Edge weightedList[], int n, int N)
     {
@@ -73,6 +77,7 @@ public:
     }
 };
 
+//this function keys out the specific distances between the city chosen and each other city
 void travelTimes(Vertex* ptr, int cityNum)
 {
     while (ptr != nullptr)
@@ -83,6 +88,7 @@ void travelTimes(Vertex* ptr, int cityNum)
     cout << endl;
 }
 
+//this function keys out the most efficient route by adding up the shortest trip back to Riverside
 void mostEfficientRoute(Vertex* ptr)
 {
     while (ptr != nullptr)
@@ -92,17 +98,8 @@ void mostEfficientRoute(Vertex* ptr)
     }
 }
 
-void printListWeight(Vertex* ptr, int i)
-{
-    cout << city[cityNum];
-    while (ptr != nullptr)
-    {
-        cout << " > " << city[ptr->val] << "(" << ptr->val << ")" 
-             << " = " << ptr->cost << "m";
-        ptr = ptr->next;
-    }
-}
-
+//calling the functions neatly and with the proper city names with ID listed
+//generic functions are called at the end, with custom output based on the city chosen keyed out first
 int main()
 {
     //this is a list of the edges of the graph, connecting the weight each way
@@ -112,7 +109,7 @@ int main()
         { 2, 0, 20 }, { 2, 1, 17 }, { 2, 3, 26 }, { 3, 0, 39 }, { 3, 1, 30 }, { 3, 2, 26 },
     };
 
-    //this is the stand
+    //this is the standard list without redunancies
     Edge standardList[] =
     {
         { 0, 1, 14 }, { 0, 2, 20 }, { 0, 3, 39 }, { 1, 2, 17 }, { 1, 3, 30 }, { 2, 3, 26 }
@@ -154,13 +151,6 @@ int main()
         for (int i = cityNum; i < cityNum+1; i++)
         {
             travelTimes(graph.head[i], i);
-        }
-
-        //attempt to calculate trip length
-        for (int i = cityNum; i < cityNum+1; i++)
-        {
-            printListWeight(graph.head[i], i-1);
-            cout << endl;
         }
 
         cout << "\n|Reference guides|";
