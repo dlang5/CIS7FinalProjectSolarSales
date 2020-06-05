@@ -6,8 +6,6 @@ Final Project
 
 Solar Sales
 
-![alt text](https://i.imgur.com/FdhLiII.png)
-
 This project involves the case of a solar panel salesman. The salesman lives in the city of Riverside, and
 markets to homeowners in Moreno Valley, Perris, Hemet, as well as his home city of Riverside.
 
@@ -36,7 +34,8 @@ https://repl.it/@ProfKaseyNguyen/JH-Solar-Sales
 
 [&lt;Week 6 Lab&gt;](https://rccd.instructure.com/courses/21484/pages/chapter-16-notes?module_item_id=771022)
 
-
+Flowchart:
+![alt text](https://i.imgur.com/FdhLiII.png)
 
 Information Sources:
 
