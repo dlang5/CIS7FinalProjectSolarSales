@@ -9,6 +9,8 @@ Solar Sales
 This project involves the case of a solar panel salesman. The salesman lives in the city of Riverside, and
 markets to homeowners in Moreno Valley, Perris, Hemet, as well as his home city of Riverside.
 
+![alt text](https://i.imgur.com/DUcfNAv.png)
+
 If the salesman starts and ends in his hometown each day, determine all possible trip variations for the salesman's
 workday. Determine breadth first search, shortest path, and the most low cost trips for the marketing specialist.
 
