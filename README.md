@@ -3,6 +3,8 @@ Spring 2020
 Final Project
 Solar Sales
 
+![alt text](https://i.imgur.com/FdhLiII.png)
+
 This project involves the case of a solar panel salesman. The salesman lives in the city of Riverside, and
 markets to homeowners in Moreno Valley, Perris, Hemet, as well as his home city of Riverside.
 
