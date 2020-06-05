@@ -35,6 +35,8 @@ https://repl.it/@ProfKaseyNguyen/JH-Solar-Sales
 [&lt;Week 6 Lab&gt;](https://rccd.instructure.com/courses/21484/pages/chapter-16-notes?module_item_id=771022)
 
 Flowchart:
+
+
 ![alt text](https://i.imgur.com/FdhLiII.png)
 
 Information Sources:
