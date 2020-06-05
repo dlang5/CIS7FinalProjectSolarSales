@@ -70,3 +70,11 @@ PH = 26;
 MH = 30;
 
 https://trafficpredict.com/
+
+Future improvements planned:
+
+Implement API for location/distance (google/apple maps)
+
+Add more locations dynamically from a database
+
+Explain code, perhaps relearn maps and include in the improved code
