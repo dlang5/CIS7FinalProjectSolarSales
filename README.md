@@ -31,10 +31,10 @@ https://stackoverflow.com/questions/50221136/c-weighted-stdshuffle
 https://repl.it/@ProfKaseyNguyen/JH-Solar-Sales
 
 
--> Week 6 Notes [&lt;TextView&gt;](https://rccd.instructure.com/courses/21484/pages/chapter-16-notes?module_item_id=771022)
+[&lt;Week 6 Notes&gt;](https://rccd.instructure.com/courses/21484/pages/chapter-16-notes?module_item_id=771022)
 
 
--> Week 6 Lab [&lt;TextView&gt;](https://rccd.instructure.com/courses/21484/pages/chapter-16-notes?module_item_id=771022)
+[&lt;Week 6 Lab&gt;](https://rccd.instructure.com/courses/21484/pages/chapter-16-notes?module_item_id=771022)
 
 
 
