@@ -82,3 +82,5 @@ Implement API for location/distance (google/apple maps)
 Add more locations dynamically from a database
 
 Explain code, perhaps relearn maps and include in the improved code
+
+Add AI route tracking using machine learning (N = 1000+)
