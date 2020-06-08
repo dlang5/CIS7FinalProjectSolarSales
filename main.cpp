@@ -95,7 +95,7 @@ void mapMaker(Vertex* ptr, int i)
 {
     while (ptr != nullptr)
     {
-        cout << "(" << i << "," << ptr->val << "," << ptr->cost << ")";
+        cout << "(" << i << "," << ptr->val << "," << ptr->cost << "m" << ")";
         ptr = ptr->next;
     }
     cout << endl;
