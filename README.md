@@ -23,7 +23,7 @@ About this program:
 
 The graph, along with vertices and edges are the major structures involed in this project. Graphs are defined by the vertices and the edges that connect them, as well as any possible weight (representing a distance or travel time) of the edges. Using an undirected graph as each distance is the same in each direction, the vertices and edge values are all stored. An adjacency list is also used to "draw" the graph into the program, giving it an idea of what vertices are connected and which are not. The program uses traversal as well to determine the routes that are possible and giving a possible route for the solar salesman. The program also uses decision trees internally, as the shortest route and breadth-first route are both calculated by the weighted edges which determines what the program tells the user, depending on the given input.
 
-Other progamming techniques used include storing float values, storing weighted edges and vertice values into a graph, linking stored strings in an array to each vertex.
+Other progamming techniques used the use of Dijkstra's algorithm to determine shortest/cheapest paths, storing weighted edges and vertice values into a graph, and linking stored strings in an array to each vertex.
 
 Reference Code Sources:
 
