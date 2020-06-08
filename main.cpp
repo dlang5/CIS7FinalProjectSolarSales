@@ -2,23 +2,6 @@
 #include <iostream>
 using namespace std;
 
-//distances in miles between cities (google maps)
-float distRM = 10.6;
-float distRP = 18.7;
-float distRH = 33.8;
-float distMP = 15.6;
-float distMH = 23.7;
-float distPH = 16.5;
-
-//travel time in minutes between cities according to google maps
-//this creates two graphs
-int timeRM = 14;
-int timeRP = 20;
-int timeRH = 39;
-int timeMP = 17;
-int timeMH = 30;
-int timePH = 26;
-
 //user input of ID
 int cityNum;
 
@@ -26,9 +9,6 @@ int cityNum;
 //array would be sorted by distance from starting city if appended to
 //this could be accomplished with a sort and pointers
 const char *city[4] = {"Riverside","Moreno Valley","Perris","Hemet"};
-
-//this array is unnecessary
-//int cityNums[4] = {0,1,2,3};
 
 //Implements the vertex structure, gives the point two values and a pointer
 struct Vertex {
