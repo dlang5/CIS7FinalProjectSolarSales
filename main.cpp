@@ -78,15 +78,12 @@ void mostEfficientRoute(Vertex* ptr)
     }
 }
 
-//this function sorts the edges
-void printListWeight(Vertex* ptr, int i)
+//this function sorts the weighted edges from high to low
+void shortestPath(vector<int> adj[], int V)
 {
-    cout << city[cityNum];
-    while (ptr != nullptr)
+    for (int v = 0; v < V; ++v)
     {
-        cout << " > " << city[ptr->val] << "(" << ptr->val << ")" 
-             << " = " << ptr->cost << "m";
-        ptr = ptr->next;
+        cout << city[v] << "(" << v << ")" << " -> " << city[V] << "(" << V << ")" << endl;
     }
 }
 
@@ -146,19 +143,9 @@ int main()
             travelTimes(graph.head[i], i);
         }
 
-        //calculate trip length based on sorted edges
-        for (int i = cityNum; i < cityNum+1; i++)
-        {
-            printListWeight(graph.head[i], i-1);
-            cout << endl;
-        }
-
-        cout << "\n|Reference guides|\n";
+        cout << "|Reference guides|\n";
         
         cout << "\nMatrix Map:\n";
-        int X = 5;
-        int x = sizeof(weightedList)/sizeof(weightedList[0]);
-        Graph graph2(weightedList, x, X);
         for (int i = 0; i < N; i++)
         {
             mapMaker(graph.head[i], i);;
@@ -181,17 +168,12 @@ int main()
             cout << endl;
         }
 
-    cout << endl << "Shortest Path Determiner:\n";
-    int N = 4;
-    int n = sizeof(weightedList)/sizeof(weightedList[cityNum]);
-    Graph graph(weightedList, n, N);
-    for (int i = 0; i < N; i++)
-    {
-        cout << city[i] << "(" << i << ")";
-        mostEfficientRoute(graph.head[i]);
-        cout << endl;
-    }
-
+        cout << "\nShortest Paths, ranked best to worst:\n";
+        for (int i = 0; i < 4; i++)
+        {
+            vector<int> adj[i];
+            shortestPath(adj, i);
+        }
 }
 return 0;
 }
